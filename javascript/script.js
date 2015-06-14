@@ -30,7 +30,7 @@ function loadContent() {
 
   xhttp.overrideMimeType('text/xml');
 
-  xhttp.open("GET", "content.xml", false);
+  xhttp.open("GET", "./data/content.xml", false);
   xhttp.send(null);
   var xmlDoc = xhttp.responseXML;
 
