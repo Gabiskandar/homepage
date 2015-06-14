@@ -4,21 +4,64 @@
   font-family: 'Verdana', 'Helvetica', sans-serif;
 }
 
+body {
+  
+}
+
 header {
   text-align: center;
   width: 100%;
 }
 
 main {
-  float: left;
+  display: flex;
+  flex-flow: row;
+  margin: 0px;
+  min-height: 800px;
+  padding: 0px;
   width: 70%;
-
-aside {
-  float: right;
-  width: 30%;
 }
 
-footer {
-  text-align: center;
-  width: 100%;
+main > article {
+  background: #dddd88;
+  border: 1px solid #cccc33;
+  border-radius: 7pt;
+  flex: 3 1 60%;
+  margin: 4px;
+  order: 2;
+  padding: 5px;
 }
+
+main > nav {
+  background: #ccccff;
+  border: 1px solid #8888bb;
+  border-radius: 7pt;
+  flex: 1 6 20%
+  margin: 4px;
+  order: 1;
+  padding: 5px;
+}
+
+main > aside {
+  background: #ffeebb;
+  border: 1px solid #eebb55;
+  border-radius: 7pt;
+  display: block;
+  margin: 4px;
+  min-height: 100px;
+  padding: 5px;
+}
+
+@media all and (max-width: 640px) {
+  
+  main > article, main > nav, main > aside {
+    order: 0;
+  }
+
+  main > nav, main > aside, header, footer {
+    max-height: 50px;
+    min-height: 50px;
+  }
+
+}
+
